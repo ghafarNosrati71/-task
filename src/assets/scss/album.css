@@ -27,10 +27,10 @@ input {
   border-radius: 10px;
   border-color: transparent transparent rgba(146, 146, 146, 0.1) transparent;
 }
-img {
-  max-width: 100%;
-  display: block;
-  overflow: hidden;
+.img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 p {
@@ -87,16 +87,22 @@ h5 {
   cursor: pointer;
   margin-top: 3em;
   display: grid;
-  grid-template-columns: repeat(4, 320px);
-  grid-auto-rows: 500px;
+  grid-template-columns: repeat(4, 300px);
+  grid-auto-rows: 400px;
   gap: 1rem;
 }
 @media only screen and (max-width: 360px) {
   .profile--container {
     margin-top: 3em;
     display: grid;
-    grid-template-columns: repeat(1, 350px);
-    grid-auto-rows: 500px;
+    grid-template-columns: repeat(1, 310px);
+    grid-auto-rows: 420px;
     gap: 1rem;
+  }
+  .img {
+    width: 310px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
   }
 }

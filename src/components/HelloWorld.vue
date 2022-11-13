@@ -8,14 +8,16 @@
       <option value="3">Option 3</option>
     </select>
   </div>
-  <section class="profile--container">
+  <section class="profile--container"
+  @click="click">
     <article v-for="n in 8" :key="n" class="card">
       <img
-        src="https://images.unsplash.com/photo-1612972412954-c7dd0e42ba4b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=751&q=80"
+      class="img"
+        src="../assets/iran.png"
         alt="card image"
       />
       <article class="content">
-        <h3>Germany</h3>
+        <h3>Iran</h3>
         <div>
           <p><b> population : </b>123.245.334.14</p>
           <p><b> Region : </b>Eruope</p>
@@ -37,6 +39,11 @@ export default {
   data: function () {
     return {};
   },
+  methods:{
+    click(){
+      this.$router.push("item")
+    }
+  }
 };
 </script>
 
